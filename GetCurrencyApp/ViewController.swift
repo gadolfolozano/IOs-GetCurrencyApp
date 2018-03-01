@@ -8,18 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UISearchBarDelegate {
 
+    @IBOutlet weak var mSearchBar: UISearchBar!
+    @IBOutlet weak var mTxtUsdCurrency: UILabel!
+    @IBOutlet weak var mTxtCanCurrency: UILabel!
+    @IBOutlet weak var mTxtPenCurrency: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        mSearchBar.delegate = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print(mSearchBar.text!)
     }
-
 
 }
 

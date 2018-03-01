@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,73 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GetCurrencyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="YHL-5c-opx">
+                                <rect key="frame" x="0.0" y="95" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GET CURRENCY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="792-di-qxO">
+                                <rect key="frame" x="81" y="33" width="213" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="7sv-OE-hdY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnN-QZ-oHN">
+                                <rect key="frame" x="120" y="237" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="il2-fm-gkb">
+                                <rect key="frame" x="120" y="296" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MpL-Fy-pax">
+                                <rect key="frame" x="120" y="359" width="135" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="792-di-qxO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="81" id="1Wm-QW-Xq0"/>
+                            <constraint firstItem="YHL-5c-opx" firstAttribute="centerX" secondItem="vnN-QZ-oHN" secondAttribute="centerX" id="BKf-Jb-dbD"/>
+                            <constraint firstItem="il2-fm-gkb" firstAttribute="trailing" secondItem="MpL-Fy-pax" secondAttribute="trailing" id="G4j-3C-k8W"/>
+                            <constraint firstItem="792-di-qxO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="ILe-bx-IG1"/>
+                            <constraint firstItem="MpL-Fy-pax" firstAttribute="top" secondItem="il2-fm-gkb" secondAttribute="bottom" constant="42" id="LPH-wG-47G"/>
+                            <constraint firstItem="vnN-QZ-oHN" firstAttribute="top" secondItem="YHL-5c-opx" secondAttribute="bottom" constant="86" id="Lff-AI-19O"/>
+                            <constraint firstItem="il2-fm-gkb" firstAttribute="leading" secondItem="MpL-Fy-pax" secondAttribute="leading" id="RGv-Fx-6xX"/>
+                            <constraint firstItem="vnN-QZ-oHN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="RQl-tE-4Be"/>
+                            <constraint firstAttribute="trailing" secondItem="YHL-5c-opx" secondAttribute="trailing" id="SZQ-RJ-uwh"/>
+                            <constraint firstItem="vnN-QZ-oHN" firstAttribute="leading" secondItem="il2-fm-gkb" secondAttribute="leading" id="T09-pH-jSH"/>
+                            <constraint firstItem="il2-fm-gkb" firstAttribute="top" secondItem="vnN-QZ-oHN" secondAttribute="bottom" constant="38" id="ZXy-mS-QqY"/>
+                            <constraint firstItem="YHL-5c-opx" firstAttribute="top" secondItem="792-di-qxO" secondAttribute="bottom" constant="41" id="k3z-cJ-nJF"/>
+                            <constraint firstItem="YHL-5c-opx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kgv-i3-Emc"/>
+                            <constraint firstItem="792-di-qxO" firstAttribute="centerX" secondItem="YHL-5c-opx" secondAttribute="centerX" id="rjL-QO-nBT"/>
+                            <constraint firstItem="vnN-QZ-oHN" firstAttribute="trailing" secondItem="il2-fm-gkb" secondAttribute="trailing" id="uPz-j9-NzW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mSearchBar" destination="YHL-5c-opx" id="6Zg-zY-HZW"/>
+                        <outlet property="mTxtCanCurrency" destination="il2-fm-gkb" id="9If-m4-0dH"/>
+                        <outlet property="mTxtPenCurrency" destination="MpL-Fy-pax" id="47I-Ka-RXE"/>
+                        <outlet property="mTxtUsdCurrency" destination="vnN-QZ-oHN" id="b20-vg-zWC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
